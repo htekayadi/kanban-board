@@ -21,5 +21,5 @@ export const throttle = (func, wait) => {
       context = args = null;
     }
     return result;
-  }
-}
+  };
+};
