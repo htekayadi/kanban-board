@@ -7,7 +7,7 @@ class CardForm extends Component {
   }
 
   handleClose(e) {
-    e.prevemtDefault();
+    e.preventDefault();
     this.props.handleClose();
   }
 
@@ -18,13 +18,13 @@ class CardForm extends Component {
           <form onSubmit={this.props.handleSubmit.bind(this)}>
             <input type='text'
                    value={this.props.draftCard.title}
-                   onChange={this.handleChange.bind(this, 'tittle')}
+                   onChange={this.handleChange.bind(this, 'title')}
                    placeholder="Title"
                    required={true}
                    autoFocus={true} /><br />
             <textarea value={this.props.draftCard.description}
                       onChange={this.handleChange.bind(this, 'description')}
-                      placeholder="description"
+                      placeholder="Description"
                       required={true} /><br />
             <label htmlFor="status">Status</label>
             <select id="status"
